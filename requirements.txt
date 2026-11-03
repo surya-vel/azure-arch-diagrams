@@ -1,0 +1,3 @@
+# Only the exporter needs Azure packages. build_drawio.py uses the Python standard library only.
+azure-identity>=1.15
+azure-mgmt-resourcegraph>=8.0

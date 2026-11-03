@@ -1,0 +1,3366 @@
+{
+ "metadata": {
+  "exportedAtUtc": "2026-10-08T09:00:00+00:00",
+  "source": "SAMPLE - fictional tenant",
+  "tenantIds": [
+   "00000000-aaaa-bbbb-cccc-000000000000"
+  ],
+  "counts": {
+   "subscriptions": 5,
+   "resourceGroups": 14,
+   "resources": 110
+  },
+  "resourcesByType": {
+   "microsoft.network/networksecuritygroups": 11,
+   "microsoft.network/virtualnetworks": 4,
+   "microsoft.network/publicipaddresses": 3,
+   "microsoft.network/firewallpolicies": 1,
+   "microsoft.network/azurefirewalls": 1,
+   "microsoft.network/virtualnetworkgateways": 2,
+   "microsoft.network/localnetworkgateways": 1,
+   "microsoft.network/expressroutecircuits": 1,
+   "microsoft.network/connections": 2,
+   "microsoft.network/bastionhosts": 1,
+   "microsoft.network/dnsresolvers": 1,
+   "microsoft.network/dnsresolvers/inboundendpoints": 1,
+   "microsoft.network/networkinterfaces": 5,
+   "microsoft.compute/virtualmachines": 5,
+   "microsoft.compute/disks": 5,
+   "microsoft.network/privatednszones": 8,
+   "microsoft.network/ddosprotectionplans": 1,
+   "microsoft.operationalinsights/workspaces": 1,
+   "microsoft.automation/automationaccounts": 1,
+   "microsoft.insights/actiongroups": 1,
+   "microsoft.insights/datacollectionrules": 1,
+   "microsoft.recoveryservices/vaults": 1,
+   "microsoft.dataprotection/backupvaults": 1,
+   "microsoft.network/routetables": 2,
+   "microsoft.storage/storageaccounts": 8,
+   "microsoft.keyvault/vaults": 2,
+   "microsoft.datafactory/factories": 1,
+   "microsoft.purview/accounts": 1,
+   "microsoft.databricks/workspaces": 1,
+   "microsoft.databricks/accessconnectors": 1,
+   "microsoft.managedidentity/userassignedidentities": 1,
+   "microsoft.sql/managedinstances": 1,
+   "microsoft.sql/managedinstances/databases": 1,
+   "microsoft.network/privateendpoints": 12,
+   "microsoft.network/loadbalancers": 1,
+   "microsoft.web/serverfarms": 1,
+   "microsoft.web/sites": 4,
+   "microsoft.network/applicationgatewaywebapplicationfirewallpolicies": 1,
+   "microsoft.network/applicationgateways": 1,
+   "microsoft.sql/servers": 1,
+   "microsoft.sql/servers/databases": 3,
+   "microsoft.healthcareapis/workspaces": 1,
+   "microsoft.healthcareapis/workspaces/fhirservices": 1,
+   "microsoft.insights/components": 1,
+   "microsoft.containerregistry/registries": 1,
+   "microsoft.containerservice/managedclusters": 1,
+   "microsoft.cdn/profiles": 1,
+   "microsoft.machinelearningservices/workspaces": 1,
+   "microsoft.cognitiveservices/accounts": 1
+  }
+ },
+ "subscriptions": [
+  {
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "name": "sub-platform-connectivity",
+   "tenantId": "00000000-aaaa-bbbb-cccc-000000000000",
+   "state": "Enabled",
+   "tags": {},
+   "managementGroups": [
+    {
+     "displayName": "Platform",
+     "name": "platform"
+    },
+    {
+     "displayName": "Contoso-CRO",
+     "name": "contoso-cro"
+    }
+   ]
+  },
+  {
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "name": "sub-platform-management",
+   "tenantId": "00000000-aaaa-bbbb-cccc-000000000000",
+   "state": "Enabled",
+   "tags": {},
+   "managementGroups": [
+    {
+     "displayName": "Platform",
+     "name": "platform"
+    },
+    {
+     "displayName": "Contoso-CRO",
+     "name": "contoso-cro"
+    }
+   ]
+  },
+  {
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "name": "sub-clinical-data-prod",
+   "tenantId": "00000000-aaaa-bbbb-cccc-000000000000",
+   "state": "Enabled",
+   "tags": {},
+   "managementGroups": [
+    {
+     "displayName": "Corp",
+     "name": "corp"
+    },
+    {
+     "displayName": "Landing Zones",
+     "name": "landing-zones"
+    },
+    {
+     "displayName": "Contoso-CRO",
+     "name": "contoso-cro"
+    }
+   ]
+  },
+  {
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "name": "sub-trial-apps-prod",
+   "tenantId": "00000000-aaaa-bbbb-cccc-000000000000",
+   "state": "Enabled",
+   "tags": {},
+   "managementGroups": [
+    {
+     "displayName": "Online",
+     "name": "online"
+    },
+    {
+     "displayName": "Landing Zones",
+     "name": "landing-zones"
+    },
+    {
+     "displayName": "Contoso-CRO",
+     "name": "contoso-cro"
+    }
+   ]
+  },
+  {
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "name": "sub-analytics-sandbox",
+   "tenantId": "00000000-aaaa-bbbb-cccc-000000000000",
+   "state": "Enabled",
+   "tags": {},
+   "managementGroups": [
+    {
+     "displayName": "Sandbox",
+     "name": "sandbox"
+    },
+    {
+     "displayName": "Contoso-CRO",
+     "name": "contoso-cro"
+    }
+   ]
+  }
+ ],
+ "resourceGroups": [
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu",
+   "name": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu",
+   "name": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-ddos",
+   "name": "rg-ddos",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-management-weu",
+   "name": "rg-management-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-backup-weu",
+   "name": "rg-backup-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical",
+   "name": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform",
+   "name": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-governance",
+   "name": "rg-governance",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps",
+   "name": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod",
+   "name": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-health-data",
+   "name": "rg-health-data",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-edge",
+   "name": "rg-edge",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics",
+   "name": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch",
+   "name": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "location": "westeurope",
+   "tags": {
+    "owner": "platform-team"
+   }
+  }
+ ],
+ "resources": [
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkSecurityGroups/nsg-hub-mgmt",
+   "name": "nsg-hub-mgmt",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkSecurityGroups/nsg-hub-dns",
+   "name": "nsg-hub-dns",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu",
+   "name": "vnet-hub-weu",
+   "type": "microsoft.network/virtualnetworks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "addressSpace": {
+     "addressPrefixes": [
+      "10.0.0.0/22"
+     ]
+    },
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/GatewaySubnet",
+      "name": "GatewaySubnet",
+      "properties": {
+       "addressPrefix": "10.0.0.0/27"
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/AzureFirewallSubnet",
+      "name": "AzureFirewallSubnet",
+      "properties": {
+       "addressPrefix": "10.0.0.64/26"
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/AzureBastionSubnet",
+      "name": "AzureBastionSubnet",
+      "properties": {
+       "addressPrefix": "10.0.0.128/26"
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/snet-dns-inbound",
+      "name": "snet-dns-inbound",
+      "properties": {
+       "addressPrefix": "10.0.1.0/28",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkSecurityGroups/nsg-hub-dns"
+       },
+       "delegations": [
+        {
+         "name": "d",
+         "properties": {
+          "serviceName": "Microsoft.Network/dnsResolvers"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/snet-mgmt",
+      "name": "snet-mgmt",
+      "properties": {
+       "addressPrefix": "10.0.2.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkSecurityGroups/nsg-hub-mgmt"
+       }
+      }
+     }
+    ],
+    "virtualNetworkPeerings": [
+     {
+      "name": "peer-vnet-clinical-prod-weu",
+      "properties": {
+       "remoteVirtualNetwork": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu"
+       },
+       "peeringState": "Connected",
+       "allowForwardedTraffic": true
+      }
+     },
+     {
+      "name": "peer-vnet-trialapps-prod-weu",
+      "properties": {
+       "remoteVirtualNetwork": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu"
+       },
+       "peeringState": "Connected",
+       "allowForwardedTraffic": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/publicIPAddresses/pip-afw-hub-weu",
+   "name": "pip-afw-hub-weu",
+   "type": "microsoft.network/publicipaddresses",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/firewallPolicies/afwp-hub-weu",
+   "name": "afwp-hub-weu",
+   "type": "microsoft.network/firewallpolicies",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/azureFirewalls/afw-hub-weu",
+   "name": "afw-hub-weu",
+   "type": "microsoft.network/azurefirewalls",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "sku": {
+     "name": "AZFW_VNet",
+     "tier": "Premium"
+    },
+    "ipConfigurations": [
+     {
+      "name": "c",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/AzureFirewallSubnet"
+       },
+       "publicIPAddress": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/publicIPAddresses/pip-afw-hub-weu"
+       },
+       "privateIPAddress": "10.0.0.68"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworkGateways/vgw-hub-weu",
+   "name": "vgw-hub-weu",
+   "type": "microsoft.network/virtualnetworkgateways",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "gatewayType": "Vpn",
+    "ipConfigurations": [
+     {
+      "name": "c",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/GatewaySubnet"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworkGateways/ergw-hub-weu",
+   "name": "ergw-hub-weu",
+   "type": "microsoft.network/virtualnetworkgateways",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "gatewayType": "ExpressRoute",
+    "ipConfigurations": [
+     {
+      "name": "c",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/GatewaySubnet"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/localNetworkGateways/lng-hq-london",
+   "name": "lng-hq-london",
+   "type": "microsoft.network/localnetworkgateways",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "gatewayIpAddress": "203.0.113.10"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/expressRouteCircuits/erc-equinix-ams",
+   "name": "erc-equinix-ams",
+   "type": "microsoft.network/expressroutecircuits",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": {
+    "name": "Standard_MeteredData"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/connections/cn-vpn-hq-london",
+   "name": "cn-vpn-hq-london",
+   "type": "microsoft.network/connections",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "connectionType": "IPsec",
+    "connectionStatus": "Connected",
+    "virtualNetworkGateway1": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworkGateways/vgw-hub-weu"
+    },
+    "localNetworkGateway2": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/localNetworkGateways/lng-hq-london"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/connections/cn-er-equinix",
+   "name": "cn-er-equinix",
+   "type": "microsoft.network/connections",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "connectionType": "ExpressRoute",
+    "connectionStatus": "Connected",
+    "virtualNetworkGateway1": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworkGateways/ergw-hub-weu"
+    },
+    "peer": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/expressRouteCircuits/erc-equinix-ams"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/bastionHosts/bas-hub-weu",
+   "name": "bas-hub-weu",
+   "type": "microsoft.network/bastionhosts",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": {
+    "name": "Standard"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "c",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/AzureBastionSubnet"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/dnsResolvers/dnspr-hub-weu",
+   "name": "dnspr-hub-weu",
+   "type": "microsoft.network/dnsresolvers",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "virtualNetwork": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/dnsResolvers/inboundEndpoints/dnspr-hub-weu/in",
+   "name": "in",
+   "type": "microsoft.network/dnsresolvers/inboundendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "subnet": {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/snet-dns-inbound"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkInterfaces/vm-jumpbox-01-nic",
+   "name": "vm-jumpbox-01-nic",
+   "type": "microsoft.network/networkinterfaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "ipconfig1",
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkInterfaces/vm-jumpbox-01-nic/ipConfigurations/ipconfig1",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu/subnets/snet-mgmt"
+       },
+       "privateIPAddress": "10.0.2.4"
+      }
+     }
+    ],
+    "virtualMachine": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Compute/virtualMachines/vm-jumpbox-01"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Compute/virtualMachines/vm-jumpbox-01",
+   "name": "vm-jumpbox-01",
+   "type": "microsoft.compute/virtualmachines",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "hardwareProfile": {
+     "vmSize": "Standard_B2ms"
+    },
+    "storageProfile": {
+     "osDisk": {
+      "osType": "Windows"
+     }
+    },
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/networkInterfaces/vm-jumpbox-01-nic"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Compute/disks/vm-jumpbox-01-osdisk",
+   "name": "vm-jumpbox-01-osdisk",
+   "type": "microsoft.compute/disks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-connectivity-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": {
+    "name": "Premium_LRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net",
+   "name": "privatelink.blob.core.windows.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.dfs.core.windows.net",
+   "name": "privatelink.dfs.core.windows.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+   "name": "privatelink.vaultcore.azure.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+   "name": "privatelink.database.windows.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+   "name": "privatelink.azurewebsites.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.datafactory.azure.net",
+   "name": "privatelink.datafactory.azure.net",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.purview.azure.com",
+   "name": "privatelink.purview.azure.com",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-dns-weu/providers/Microsoft.Network/privateDnsZones/privatelink.fhir.azurehealthcareapis.com",
+   "name": "privatelink.fhir.azurehealthcareapis.com",
+   "type": "microsoft.network/privatednszones",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-dns-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-ddos/providers/Microsoft.Network/ddosProtectionPlans/ddos-cro-global",
+   "name": "ddos-cro-global",
+   "type": "microsoft.network/ddosprotectionplans",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-ddos",
+   "subscriptionId": "11111111-0000-0000-0000-000000000001",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-management-weu/providers/Microsoft.OperationalInsights/workspaces/law-cro-central",
+   "name": "law-cro-central",
+   "type": "microsoft.operationalinsights/workspaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-management-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": {
+    "name": "PerGB2018"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-management-weu/providers/Microsoft.Automation/automationAccounts/aa-cro-ops",
+   "name": "aa-cro-ops",
+   "type": "microsoft.automation/automationaccounts",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-management-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-management-weu/providers/Microsoft.Insights/actionGroups/ag-platform-oncall",
+   "name": "ag-platform-oncall",
+   "type": "microsoft.insights/actiongroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-management-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-management-weu/providers/Microsoft.Insights/dataCollectionRules/dcr-vm-baseline",
+   "name": "dcr-vm-baseline",
+   "type": "microsoft.insights/datacollectionrules",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-management-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-backup-weu/providers/Microsoft.RecoveryServices/vaults/rsv-cro-prod-weu",
+   "name": "rsv-cro-prod-weu",
+   "type": "microsoft.recoveryservices/vaults",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-backup-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": {
+    "name": "RS0"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000002/resourceGroups/rg-backup-weu/providers/Microsoft.DataProtection/backupVaults/bvault-cro-blob",
+   "name": "bvault-cro-blob",
+   "type": "microsoft.dataprotection/backupvaults",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-backup-weu",
+   "subscriptionId": "11111111-0000-0000-0000-000000000002",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-dbx-public",
+   "name": "nsg-dbx-public",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-dbx-private",
+   "name": "nsg-dbx-private",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-pe",
+   "name": "nsg-pe",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-sas",
+   "name": "nsg-sas",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-sqlmi",
+   "name": "nsg-sqlmi",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu",
+   "name": "vnet-clinical-prod-weu",
+   "type": "microsoft.network/virtualnetworks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "addressSpace": {
+     "addressPrefixes": [
+      "10.10.0.0/20"
+     ]
+    },
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-dbx-public",
+      "name": "snet-dbx-public",
+      "properties": {
+       "addressPrefix": "10.10.0.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-dbx-public"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/routeTables/rt-clinical-to-fw"
+       },
+       "delegations": [
+        {
+         "name": "d",
+         "properties": {
+          "serviceName": "Microsoft.Databricks/workspaces"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-dbx-private",
+      "name": "snet-dbx-private",
+      "properties": {
+       "addressPrefix": "10.10.1.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-dbx-private"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/routeTables/rt-clinical-to-fw"
+       },
+       "delegations": [
+        {
+         "name": "d",
+         "properties": {
+          "serviceName": "Microsoft.Databricks/workspaces"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints",
+      "name": "snet-privateendpoints",
+      "properties": {
+       "addressPrefix": "10.10.2.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-pe"
+       }
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-sqlmi",
+      "name": "snet-sqlmi",
+      "properties": {
+       "addressPrefix": "10.10.3.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-sqlmi"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/routeTables/rt-clinical-to-fw"
+       },
+       "delegations": [
+        {
+         "name": "d",
+         "properties": {
+          "serviceName": "Microsoft.Sql/managedInstances"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute",
+      "name": "snet-statcompute",
+      "properties": {
+       "addressPrefix": "10.10.4.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/networkSecurityGroups/nsg-sas"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/routeTables/rt-clinical-to-fw"
+       }
+      }
+     }
+    ],
+    "virtualNetworkPeerings": [
+     {
+      "name": "peer-vnet-hub-weu",
+      "properties": {
+       "remoteVirtualNetwork": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu"
+       },
+       "peeringState": "Connected",
+       "allowForwardedTraffic": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/routeTables/rt-clinical-to-fw",
+   "name": "rt-clinical-to-fw",
+   "type": "microsoft.network/routetables",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-clinical",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "routes": [
+     {
+      "name": "default",
+      "properties": {
+       "addressPrefix": "0.0.0.0/0",
+       "nextHopType": "VirtualAppliance",
+       "nextHopIpAddress": "10.0.0.68"
+      }
+     }
+    ],
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-dbx-public"
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-dbx-private"
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-sqlmi"
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute"
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Storage/storageAccounts/stclinicallakeprod",
+   "name": "stclinicallakeprod",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Standard_ZRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "isHnsEnabled": true,
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Storage/storageAccounts/stclinicallandingprod",
+   "name": "stclinicallandingprod",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Standard_ZRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "isHnsEnabled": true,
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.KeyVault/vaults/kv-clinical-prod",
+   "name": "kv-clinical-prod",
+   "type": "microsoft.keyvault/vaults",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "enablePurgeProtection": true
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.DataFactory/factories/adf-clinical-ingest-prod",
+   "name": "adf-clinical-ingest-prod",
+   "type": "microsoft.datafactory/factories",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-governance/providers/Microsoft.Purview/accounts/pview-cro-catalog",
+   "name": "pview-cro-catalog",
+   "type": "microsoft.purview/accounts",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-governance",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Databricks/workspaces/dbw-clinical-prod",
+   "name": "dbw-clinical-prod",
+   "type": "microsoft.databricks/workspaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "premium"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "parameters": {
+     "customVirtualNetworkId": {
+      "value": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu"
+     },
+     "customPublicSubnetName": {
+      "value": "snet-dbx-public"
+     },
+     "customPrivateSubnetName": {
+      "value": "snet-dbx-private"
+     }
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Databricks/accessConnectors/dbac-clinical-prod",
+   "name": "dbac-clinical-prod",
+   "type": "microsoft.databricks/accessconnectors",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-adf-clinical",
+   "name": "id-adf-clinical",
+   "type": "microsoft.managedidentity/userassignedidentities",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Sql/managedInstances/sqlmi-clinical-prod",
+   "name": "sqlmi-clinical-prod",
+   "type": "microsoft.sql/managedinstances",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "GP_Gen5",
+    "capacity": 8
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnetId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-sqlmi"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Sql/managedInstances/databases/sqlmi-clinical-prod/CDMS",
+   "name": "CDMS",
+   "type": "microsoft.sql/managedinstances/databases",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/privateEndpoints/pe-stlake-dfs",
+   "name": "pe-stlake-dfs",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-stlake-dfs",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Storage/storageAccounts/stclinicallakeprod",
+       "groupIds": [
+        "dfs"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/privateEndpoints/pe-stlake-blob",
+   "name": "pe-stlake-blob",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-stlake-blob",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Storage/storageAccounts/stclinicallakeprod",
+       "groupIds": [
+        "blob"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/privateEndpoints/pe-stlanding-blob",
+   "name": "pe-stlanding-blob",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-stlanding-blob",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Storage/storageAccounts/stclinicallandingprod",
+       "groupIds": [
+        "blob"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/privateEndpoints/pe-kv-clinical",
+   "name": "pe-kv-clinical",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-kv-clinical",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.KeyVault/vaults/kv-clinical-prod",
+       "groupIds": [
+        "vault"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/privateEndpoints/pe-adf-clinical",
+   "name": "pe-adf-clinical",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-adf-clinical",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.DataFactory/factories/adf-clinical-ingest-prod",
+       "groupIds": [
+        "dataFactory"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-governance/providers/Microsoft.Network/privateEndpoints/pe-purview",
+   "name": "pe-purview",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-governance",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-purview",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-governance/providers/Microsoft.Purview/accounts/pview-cro-catalog",
+       "groupIds": [
+        "account"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-01-nic",
+   "name": "vm-sasgrid-01-nic",
+   "type": "microsoft.network/networkinterfaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "ipconfig1",
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-01-nic/ipConfigurations/ipconfig1",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute"
+       },
+       "privateIPAddress": "10.10.4.11"
+      }
+     }
+    ],
+    "virtualMachine": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-01"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-01",
+   "name": "vm-sasgrid-01",
+   "type": "microsoft.compute/virtualmachines",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "hardwareProfile": {
+     "vmSize": "Standard_E16s_v5"
+    },
+    "storageProfile": {
+     "osDisk": {
+      "osType": "Linux"
+     }
+    },
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-01-nic"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/disks/vm-sasgrid-01-osdisk",
+   "name": "vm-sasgrid-01-osdisk",
+   "type": "microsoft.compute/disks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Premium_LRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-02-nic",
+   "name": "vm-sasgrid-02-nic",
+   "type": "microsoft.network/networkinterfaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "ipconfig1",
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-02-nic/ipConfigurations/ipconfig1",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute"
+       },
+       "privateIPAddress": "10.10.4.12"
+      }
+     }
+    ],
+    "virtualMachine": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-02"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-02",
+   "name": "vm-sasgrid-02",
+   "type": "microsoft.compute/virtualmachines",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "hardwareProfile": {
+     "vmSize": "Standard_E16s_v5"
+    },
+    "storageProfile": {
+     "osDisk": {
+      "osType": "Linux"
+     }
+    },
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-02-nic"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/disks/vm-sasgrid-02-osdisk",
+   "name": "vm-sasgrid-02-osdisk",
+   "type": "microsoft.compute/disks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Premium_LRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-03-nic",
+   "name": "vm-sasgrid-03-nic",
+   "type": "microsoft.network/networkinterfaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "ipconfig1",
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-03-nic/ipConfigurations/ipconfig1",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute"
+       },
+       "privateIPAddress": "10.10.4.13"
+      }
+     }
+    ],
+    "virtualMachine": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-03"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/virtualMachines/vm-sasgrid-03",
+   "name": "vm-sasgrid-03",
+   "type": "microsoft.compute/virtualmachines",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "hardwareProfile": {
+     "vmSize": "Standard_E16s_v5"
+    },
+    "storageProfile": {
+     "osDisk": {
+      "osType": "Linux"
+     }
+    },
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-03-nic"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Compute/disks/vm-sasgrid-03-osdisk",
+   "name": "vm-sasgrid-03-osdisk",
+   "type": "microsoft.compute/disks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Premium_LRS"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/loadBalancers/lbi-sas-grid",
+   "name": "lbi-sas-grid",
+   "type": "microsoft.network/loadbalancers",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-clinical-data-platform",
+   "subscriptionId": "11111111-0000-0000-0000-000000000003",
+   "sku": {
+    "name": "Standard"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "GxP"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "frontendIPConfigurations": [
+     {
+      "name": "fe",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-network-clinical/providers/Microsoft.Network/virtualNetworks/vnet-clinical-prod-weu/subnets/snet-statcompute"
+       },
+       "privateIPAddress": "10.10.4.5"
+      }
+     }
+    ],
+    "backendAddressPools": [
+     {
+      "name": "be",
+      "properties": {
+       "backendIPConfigurations": [
+        {
+         "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-01-nic/ipConfigurations/ipconfig1"
+        },
+        {
+         "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-02-nic/ipConfigurations/ipconfig1"
+        },
+        {
+         "id": "/subscriptions/11111111-0000-0000-0000-000000000003/resourceGroups/rg-clinical-data-platform/providers/Microsoft.Network/networkInterfaces/vm-sasgrid-03-nic/ipConfigurations/ipconfig1"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-appgw",
+   "name": "nsg-appgw",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-appint",
+   "name": "nsg-appint",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-pe",
+   "name": "nsg-pe",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-aks",
+   "name": "nsg-aks",
+   "type": "microsoft.network/networksecuritygroups",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu",
+   "name": "vnet-trialapps-prod-weu",
+   "type": "microsoft.network/virtualnetworks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "addressSpace": {
+     "addressPrefixes": [
+      "10.20.0.0/20"
+     ]
+    },
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appgw",
+      "name": "snet-appgw",
+      "properties": {
+       "addressPrefix": "10.20.0.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-appgw"
+       }
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int",
+      "name": "snet-appservice-int",
+      "properties": {
+       "addressPrefix": "10.20.1.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-appint"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/routeTables/rt-apps-to-fw"
+       },
+       "delegations": [
+        {
+         "name": "d",
+         "properties": {
+          "serviceName": "Microsoft.Web/serverFarms"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints",
+      "name": "snet-privateendpoints",
+      "properties": {
+       "addressPrefix": "10.20.2.0/24",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-pe"
+       }
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-aks",
+      "name": "snet-aks",
+      "properties": {
+       "addressPrefix": "10.20.4.0/22",
+       "networkSecurityGroup": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/networkSecurityGroups/nsg-aks"
+       },
+       "routeTable": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/routeTables/rt-apps-to-fw"
+       }
+      }
+     }
+    ],
+    "virtualNetworkPeerings": [
+     {
+      "name": "peer-vnet-hub-weu",
+      "properties": {
+       "remoteVirtualNetwork": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000001/resourceGroups/rg-connectivity-weu/providers/Microsoft.Network/virtualNetworks/vnet-hub-weu"
+       },
+       "peeringState": "Connected",
+       "allowForwardedTraffic": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/routeTables/rt-apps-to-fw",
+   "name": "rt-apps-to-fw",
+   "type": "microsoft.network/routetables",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-network-apps",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "routes": [
+     {
+      "name": "default",
+      "properties": {
+       "addressPrefix": "0.0.0.0/0",
+       "nextHopType": "VirtualAppliance",
+       "nextHopIpAddress": "10.0.0.68"
+      }
+     },
+     {
+      "name": "to-clinical",
+      "properties": {
+       "addressPrefix": "10.10.0.0/20",
+       "nextHopType": "VirtualAppliance",
+       "nextHopIpAddress": "10.0.0.68"
+      }
+     }
+    ],
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int"
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-aks"
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/serverfarms/asp-trialapps-prod",
+   "name": "asp-trialapps-prod",
+   "type": "microsoft.web/serverfarms",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "P1v3",
+    "capacity": 3
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-edc-portal-prod",
+   "name": "app-edc-portal-prod",
+   "type": "microsoft.web/sites",
+   "kind": "app,linux",
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "serverFarmId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/serverfarms/asp-trialapps-prod",
+    "defaultHostName": "app-edc-portal-prod.azurewebsites.net",
+    "hostNames": [
+     "app-edc-portal-prod.azurewebsites.net"
+    ],
+    "virtualNetworkSubnetId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int",
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-epro-api-prod",
+   "name": "app-epro-api-prod",
+   "type": "microsoft.web/sites",
+   "kind": "app,linux",
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "serverFarmId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/serverfarms/asp-trialapps-prod",
+    "defaultHostName": "app-epro-api-prod.azurewebsites.net",
+    "hostNames": [
+     "app-epro-api-prod.azurewebsites.net"
+    ],
+    "virtualNetworkSubnetId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int",
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-rtsm-prod",
+   "name": "app-rtsm-prod",
+   "type": "microsoft.web/sites",
+   "kind": "app,linux",
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "serverFarmId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/serverfarms/asp-trialapps-prod",
+    "defaultHostName": "app-rtsm-prod.azurewebsites.net",
+    "hostNames": [
+     "app-rtsm-prod.azurewebsites.net"
+    ],
+    "virtualNetworkSubnetId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int",
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/func-epro-notify-prod",
+   "name": "func-epro-notify-prod",
+   "type": "microsoft.web/sites",
+   "kind": "functionapp,linux",
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "serverFarmId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/serverfarms/asp-trialapps-prod",
+    "defaultHostName": "func-epro-notify-prod.azurewebsites.net",
+    "virtualNetworkSubnetId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appservice-int"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/wafp-trialapps",
+   "name": "wafp-trialapps",
+   "type": "microsoft.network/applicationgatewaywebapplicationfirewallpolicies",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/publicIPAddresses/pip-agw-trialapps",
+   "name": "pip-agw-trialapps",
+   "type": "microsoft.network/publicipaddresses",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/applicationGateways/agw-trialapps-prod",
+   "name": "agw-trialapps-prod",
+   "type": "microsoft.network/applicationgateways",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "sku": {
+     "name": "WAF_v2",
+     "tier": "WAF_v2"
+    },
+    "gatewayIPConfigurations": [
+     {
+      "name": "g",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-appgw"
+       }
+      }
+     }
+    ],
+    "frontendIPConfigurations": [
+     {
+      "name": "pub",
+      "properties": {
+       "publicIPAddress": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/publicIPAddresses/pip-agw-trialapps"
+       }
+      }
+     }
+    ],
+    "backendAddressPools": [
+     {
+      "name": "app-edc-portal-prod",
+      "properties": {
+       "backendAddresses": [
+        {
+         "fqdn": "app-edc-portal-prod.azurewebsites.net"
+        }
+       ]
+      }
+     },
+     {
+      "name": "app-epro-api-prod",
+      "properties": {
+       "backendAddresses": [
+        {
+         "fqdn": "app-epro-api-prod.azurewebsites.net"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Sql/servers/sql-trialapps-prod",
+   "name": "sql-trialapps-prod",
+   "type": "microsoft.sql/servers",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "publicNetworkAccess": "Disabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Sql/servers/databases/sql-trialapps-prod/sqldb-edc",
+   "name": "sqldb-edc",
+   "type": "microsoft.sql/servers/databases",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "GP_Gen5_4"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Sql/servers/databases/sql-trialapps-prod/sqldb-epro",
+   "name": "sqldb-epro",
+   "type": "microsoft.sql/servers/databases",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "GP_Gen5_4"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Sql/servers/databases/sql-trialapps-prod/sqldb-rtsm",
+   "name": "sqldb-rtsm",
+   "type": "microsoft.sql/servers/databases",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "GP_Gen5_4"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.KeyVault/vaults/kv-trialapps-prod",
+   "name": "kv-trialapps-prod",
+   "type": "microsoft.keyvault/vaults",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-health-data/providers/Microsoft.HealthcareApis/workspaces/ahdsepro",
+   "name": "ahdsepro",
+   "type": "microsoft.healthcareapis/workspaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-health-data",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-health-data/providers/Microsoft.HealthcareApis/workspaces/fhirservices/ahdsepro/fhir-epro",
+   "name": "fhir-epro",
+   "type": "microsoft.healthcareapis/workspaces/fhirservices",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-health-data",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Insights/components/appi-trialapps-prod",
+   "name": "appi-trialapps-prod",
+   "type": "microsoft.insights/components",
+   "kind": "web",
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.ContainerRegistry/registries/acrtrialappsprod",
+   "name": "acrtrialappsprod",
+   "type": "microsoft.containerregistry/registries",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "Premium"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.ContainerService/managedClusters/aks-randomisation-prod",
+   "name": "aks-randomisation-prod",
+   "type": "microsoft.containerservice/managedclusters",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "kubernetesVersion": "1.30.4",
+    "agentPoolProfiles": [
+     {
+      "name": "system",
+      "count": 3,
+      "vnetSubnetID": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-aks"
+     },
+     {
+      "name": "user",
+      "count": 4,
+      "vnetSubnetID": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-aks"
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-edge/providers/Microsoft.Cdn/profiles/afd-patient-portal",
+   "name": "afd-patient-portal",
+   "type": "microsoft.cdn/profiles",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-edge",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": {
+    "name": "Premium_AzureFrontDoor"
+   },
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/privateEndpoints/pe-app-edc-portal-prod",
+   "name": "pe-app-edc-portal-prod",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-app-edc-portal-prod",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-edc-portal-prod",
+       "groupIds": [
+        "sites"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/privateEndpoints/pe-app-epro-api-prod",
+   "name": "pe-app-epro-api-prod",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-app-epro-api-prod",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-epro-api-prod",
+       "groupIds": [
+        "sites"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/privateEndpoints/pe-app-rtsm-prod",
+   "name": "pe-app-rtsm-prod",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-app-rtsm-prod",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Web/sites/app-rtsm-prod",
+       "groupIds": [
+        "sites"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/privateEndpoints/pe-sql-trialapps",
+   "name": "pe-sql-trialapps",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-sql-trialapps",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Sql/servers/sql-trialapps-prod",
+       "groupIds": [
+        "sqlServer"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.Network/privateEndpoints/pe-kv-trialapps",
+   "name": "pe-kv-trialapps",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-trial-apps-prod",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-kv-trialapps",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-trial-apps-prod/providers/Microsoft.KeyVault/vaults/kv-trialapps-prod",
+       "groupIds": [
+        "vault"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-health-data/providers/Microsoft.Network/privateEndpoints/pe-ahds-fhir",
+   "name": "pe-ahds-fhir",
+   "type": "microsoft.network/privateendpoints",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-health-data",
+   "subscriptionId": "11111111-0000-0000-0000-000000000004",
+   "sku": null,
+   "tags": {
+    "env": "prod",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "subnet": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-network-apps/providers/Microsoft.Network/virtualNetworks/vnet-trialapps-prod-weu/subnets/snet-privateendpoints"
+    },
+    "privateLinkServiceConnections": [
+     {
+      "name": "pe-ahds-fhir",
+      "properties": {
+       "privateLinkServiceId": "/subscriptions/11111111-0000-0000-0000-000000000004/resourceGroups/rg-health-data/providers/Microsoft.HealthcareApis/workspaces/ahdsepro",
+       "groupIds": [
+        "healthcareworkspace"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/virtualNetworks/vnet-sandbox",
+   "name": "vnet-sandbox",
+   "type": "microsoft.network/virtualnetworks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": null,
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "addressSpace": {
+     "addressPrefixes": [
+      "10.50.0.0/16"
+     ]
+    },
+    "subnets": [
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/virtualNetworks/vnet-sandbox/subnets/default",
+      "name": "default",
+      "properties": {
+       "addressPrefix": "10.50.0.0/24",
+       "serviceEndpoints": [
+        {
+         "service": "Microsoft.Storage"
+        }
+       ]
+      }
+     },
+     {
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/virtualNetworks/vnet-sandbox/subnets/snet-unused",
+      "name": "snet-unused",
+      "properties": {
+       "addressPrefix": "10.50.1.0/24"
+      }
+     }
+    ],
+    "virtualNetworkPeerings": []
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/publicIPAddresses/vm-rstudio-test-pip",
+   "name": "vm-rstudio-test-pip",
+   "type": "microsoft.network/publicipaddresses",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": null,
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/networkInterfaces/vm-rstudio-test-nic",
+   "name": "vm-rstudio-test-nic",
+   "type": "microsoft.network/networkinterfaces",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": null,
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "ipConfigurations": [
+     {
+      "name": "ipconfig1",
+      "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/networkInterfaces/vm-rstudio-test-nic/ipConfigurations/ipconfig1",
+      "properties": {
+       "subnet": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/virtualNetworks/vnet-sandbox/subnets/default"
+       },
+       "privateIPAddress": "10.50.0.4",
+       "publicIPAddress": {
+        "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/publicIPAddresses/vm-rstudio-test-pip"
+       }
+      }
+     }
+    ],
+    "virtualMachine": {
+     "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Compute/virtualMachines/vm-rstudio-test"
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Compute/virtualMachines/vm-rstudio-test",
+   "name": "vm-rstudio-test",
+   "type": "microsoft.compute/virtualmachines",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": null,
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "hardwareProfile": {
+     "vmSize": "Standard_D8s_v5"
+    },
+    "storageProfile": {
+     "osDisk": {
+      "osType": "Linux"
+     }
+    },
+    "networkProfile": {
+     "networkInterfaces": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/networkInterfaces/vm-rstudio-test-nic"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Compute/disks/vm-rstudio-test-osdisk",
+   "name": "vm-rstudio-test-osdisk",
+   "type": "microsoft.compute/disks",
+   "kind": null,
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Premium_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Storage/storageAccounts/stsandboxanalytics",
+   "name": "stsandboxanalytics",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "networkAcls": {
+     "defaultAction": "Deny",
+     "virtualNetworkRules": [
+      {
+       "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.Network/virtualNetworks/vnet-sandbox/subnets/default",
+       "action": "Allow"
+      }
+     ]
+    },
+    "publicNetworkAccess": "Enabled"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.MachineLearningServices/workspaces/mlw-sandbox",
+   "name": "mlw-sandbox",
+   "type": "microsoft.machinelearningservices/workspaces",
+   "kind": "Default",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": null,
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-analytics/providers/Microsoft.CognitiveServices/accounts/oai-sandbox-swe",
+   "name": "oai-sandbox-swe",
+   "type": "microsoft.cognitiveservices/accounts",
+   "kind": "OpenAI",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-analytics",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "S0"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch/providers/Microsoft.Storage/storageAccounts/stscratch01",
+   "name": "stscratch01",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch/providers/Microsoft.Storage/storageAccounts/stscratch02",
+   "name": "stscratch02",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch/providers/Microsoft.Storage/storageAccounts/stscratch03",
+   "name": "stscratch03",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch/providers/Microsoft.Storage/storageAccounts/stscratch04",
+   "name": "stscratch04",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  },
+  {
+   "id": "/subscriptions/11111111-0000-0000-0000-000000000005/resourceGroups/rg-sandbox-scratch/providers/Microsoft.Storage/storageAccounts/stscratch05",
+   "name": "stscratch05",
+   "type": "microsoft.storage/storageaccounts",
+   "kind": "StorageV2",
+   "location": "westeurope",
+   "resourceGroup": "rg-sandbox-scratch",
+   "subscriptionId": "11111111-0000-0000-0000-000000000005",
+   "sku": {
+    "name": "Standard_LRS"
+   },
+   "tags": {
+    "env": "dev",
+    "dataClass": "internal"
+   },
+   "identity": null,
+   "zones": null,
+   "managedBy": null,
+   "properties": {
+    "provisioningState": "Succeeded"
+   }
+  }
+ ]
+}

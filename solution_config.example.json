@@ -1,0 +1,158 @@
+{
+  "title": "Contoso Azure – Solution Architecture",
+  "pageWidth": 2900,
+  "summary": "Contoso runs a hub-and-spoke Azure landing zone in West Europe. A connectivity hub with Azure Firewall, VPN and ExpressRoute gateways connects head office to a clinical data platform spoke and a trial applications spoke. A separate sandbox subscription is used for analytics experiments.",
+  "ignoreResourceGroups": [
+    "NetworkWatcherRG"
+  ],
+  "workloads": [
+    {
+      "name": "Connectivity hub",
+      "row": "access",
+      "icon": "networking/Virtual_Network_Gateways.svg",
+      "resourceGroups": ["rg-connectivity-weu", "rg-dns-weu", "rg-ddos"],
+      "summary": "Azure Firewall, VPN + ExpressRoute gateways, Bastion and DNS resolver",
+      "description": "All traffic between on-premises and the spokes passes through the hub. Head office connects by site-to-site VPN and ExpressRoute; spoke traffic is forced through Azure Firewall with user-defined routes.",
+      "fill": "#EFF6FF",
+      "stroke": "#0078D4",
+      "width": 1200
+    },
+    {
+      "name": "Clinical data platform",
+      "row": "primary",
+      "icon": "analytics/Azure_Databricks.svg",
+      "resourceGroups": ["rg-network-clinical", "rg-clinical-data-platform"],
+      "summary": "Data Factory, Databricks, SQL Managed Instance and SAS grid",
+      "description": "Data lands in stclinicallandingprod through Data Factory, is processed in Databricks and SQL Managed Instance, and is analysed on the SAS grid VMs. Storage and Key Vault are reached through private endpoints.",
+      "width": 1300
+    },
+    {
+      "name": "Trial applications",
+      "row": "primary",
+      "icon": "app_services/App_Services.svg",
+      "resourceGroups": ["rg-network-apps", "rg-trial-apps-prod", "rg-health-data", "rg-edge"],
+      "summary": "Web apps behind Application Gateway WAF and Front Door",
+      "description": "Patient and site-facing applications run on App Service behind Application Gateway (WAF) and Azure Front Door, with Azure SQL, a FHIR service and an AKS cluster for randomisation.",
+      "width": 1300
+    },
+    {
+      "name": "Operations & monitoring",
+      "row": "shared",
+      "icon": "management_governance/Monitor.svg",
+      "resourceGroups": ["rg-management-weu", "rg-backup-weu", "rg-governance"],
+      "summary": "Log Analytics, Automation, Backup and Purview",
+      "fill": "#F9FAFB",
+      "stroke": "#6B7280",
+      "width": 1100
+    }
+  ],
+  "labels": {
+    "vm-jumpbox-01": "Admin jump host",
+    "vm-sasgrid-01": "SAS grid node",
+    "vm-sasgrid-02": "SAS grid node",
+    "vm-sasgrid-03": "SAS grid node"
+  },
+  "links": [],
+  "story": [
+    "Head office connects to the hub over site-to-site VPN (cn-vpn-hq-london) and ExpressRoute (cn-er-equinix).",
+    "Spoke VNets are peered to the hub and send traffic through Azure Firewall (afw-hub-weu) using route tables.",
+    "Clinical data is ingested by Data Factory, processed in Databricks and SQL Managed Instance, and analysed on the SAS grid.",
+    "Trial applications are published through Front Door and Application Gateway WAF; back ends are private.",
+    "Logs go to the central Log Analytics workspace and VMs are protected by Azure Backup."
+  ],
+  "auditView": {
+    "title": "Contoso – Azure Infrastructure Overview",
+    "hub": {
+      "title": "Connectivity hub",
+      "items": [
+        {"resource": "vgw-hub-weu", "label": "VPN gateway", "role": "site-to-site VPN"},
+        {"resource": "afw-hub-weu", "label": "Azure Firewall", "role": "central egress / inspection"}
+      ]
+    },
+    "cards": [
+      {
+        "name": "Clinical data platform",
+        "fill": "#F0FDF4",
+        "stroke": "#16A34A",
+        "summary": "Ingest, process and analyse study data",
+        "items": [
+          {"resource": "adf-clinical-ingest-prod", "label": "Ingestion", "role": "Azure Data Factory"},
+          {"resource": "dbw-clinical-prod", "label": "Processing", "role": "Azure Databricks"},
+          {"resource": "sqlmi-clinical-prod", "label": "Database", "role": "SQL Managed Instance"}
+        ],
+        "flows": [[0, 1, "raw data"], [1, 2, "curated data"]]
+      },
+      {
+        "name": "Trial applications",
+        "fill": "#ECFEFF",
+        "stroke": "#0891B2",
+        "summary": "Patient and site-facing web apps",
+        "internet": "HTTPS",
+        "items": [
+          {"resource": "agw-trialapps-prod", "label": "Web firewall", "role": "Application Gateway WAF"},
+          {"resource": "app-edc-portal-prod", "label": "Web app", "role": "App Service"},
+          {"resource": "sql-trialapps-prod", "label": "Database", "role": "Azure SQL"}
+        ],
+        "flows": [[0, 1, "HTTPS"], [1, 2, "private endpoint"]]
+      },
+      {
+        "name": "Analytics sandbox",
+        "fill": "#FEFCE8",
+        "stroke": "#CA8A04",
+        "summary": "Isolated experimentation subscription",
+        "viaVpn": false,
+        "items": [
+          {"resource": "vm-rstudio-test", "label": "RStudio VM", "role": "test server"},
+          {"resource": "mlw-sandbox", "label": "Machine learning", "role": "Azure ML workspace"}
+        ]
+      }
+    ],
+    "monitoring": {
+      "title": "Monitoring & alerting",
+      "summary": "Central logs and alert routing",
+      "items": [
+        {"resource": "law-cro-central", "label": "Log Analytics", "role": "central logs"},
+        {"resource": "ag-platform-oncall", "label": "Alerts", "role": "on-call action group"}
+      ]
+    },
+    "keyFacts": [
+      "Hub-and-spoke network in West Europe with all spoke traffic inspected by Azure Firewall.",
+      "Data services are reached through private endpoints.",
+      "The analytics sandbox is isolated from production."
+    ]
+  },
+  "networkView": {
+    "title": "Contoso – Azure Low-Level Network Architecture",
+    "prodLabel": "West Europe",
+    "drLabel": "Azure Site Recovery targets",
+    "order": ["vnet-clinical-prod-weu", "vnet-trialapps-prod-weu"],
+    "sideZones": {
+      "title": "ANALYTICS SANDBOX · separate subscription",
+      "vnets": ["vnet-sandbox"],
+      "workloads": []
+    }
+  },
+  "declaredControls": [],
+  "focusView": {
+    "title": "Contoso – Hub & Clinical Data Platform (focused view)",
+    "pageName": "Hub · Clinical data",
+    "resourceGroups": [
+      "rg-connectivity-weu",
+      "rg-dns-weu",
+      "rg-network-clinical",
+      "rg-clinical-data-platform",
+      "rg-backup-weu"
+    ],
+    "declaredFlows": [
+      {
+        "name": "Study data ingestion",
+        "path": ["stclinicallandingprod", "adf-clinical-ingest-prod", "stclinicallakeprod", "dbw-clinical-prod"],
+        "labels": ["raw files", "copy to lake", "processed in Databricks"],
+        "note": "Study data lands in stclinicallandingprod, Data Factory copies it to the data lake and Databricks processes it (declared flow: Azure Resource Graph cannot see data movement)."
+      }
+    ],
+    "notes": [
+      "Scope: the connectivity hub and the clinical data platform spoke. Trial applications and the sandbox are excluded."
+    ]
+  }
+}

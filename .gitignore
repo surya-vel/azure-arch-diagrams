@@ -1,0 +1,30 @@
+# ---- Your Azure data: NEVER commit these -------------------------------------------------
+# The export and every generated diagram contain your real resource names, IPs and IDs.
+azure_inventory*.json
+*_mapping.json
+*.drawio
+*.html
+*_ai_context.md
+*_architecture.md
+solution_config.*.json
+!solution_config.example.json
+
+# The fictional sample is safe to publish
+!sample/
+!sample/**
+
+# ---- Python -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# ---- Editors / OS -----------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
