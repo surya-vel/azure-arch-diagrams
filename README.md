@@ -165,10 +165,35 @@ principal with Reader. Commit the output to a **private** repository. Git diffs 
 * Use `--exclude-tags` at export time and `--anonymize` before you share the AI context with an
   AI service that isn't covered by your organisation's agreement.
 
+## How the icons work
+The scripts don't create or download any images. Each shape in the `.drawio` file stores the path
+of an icon from draw.io's built-in Azure library (`img/lib/azure2/…`), and draw.io shows the
+official Microsoft Azure icon when you open the file:
+
+```xml
+<mxCell style="image;image=img/lib/azure2/compute/Virtual_Machine.svg;..." />
+```
+
+* `TYPE_INFO` in `build_drawio.py` maps about 130 Azure resource types (e.g.
+  `microsoft.compute/virtualmachines`) to an icon and a label.
+* `KIND_OVERRIDES` picks a more specific icon from the resource's `kind`, e.g. Function App or
+  Logic App instead of a plain Web App.
+* Unknown types get the generic "All resources" icon (`FALLBACK_ICON`), so new Azure services still
+  appear in the diagram.
+
+To add a resource type or change an icon, add a line to `TYPE_INFO`:
+
+```python
+"microsoft.example/widgets": ("general/All_Resources.svg", "Widget"),
+```
+
+To find an icon's path, enable *More Shapes → Azure* in draw.io, drop the icon on a page, select it
+and press **Ctrl+E** (Edit Style). The path after `img/lib/azure2/` (e.g. `compute/Virtual_Machine.svg`)
+is what goes in `TYPE_INFO`.
+
 ## Extending
-To add icons or labels, edit `TYPE_INFO` in `build_drawio.py`. Icon paths come from draw.io's
-`img/lib/azure2/…` library. Colours are in `C` and `EDGE`, and new relationships go in
-`Topology._relations`.
+Colours are in `C` and `EDGE` in `build_drawio.py`, and new relationships between resources go
+in `Topology._relations`.
 
 `COPILOT_PROMPTS.md` has prompts that turn the AI context into data-flow, security-review and
 executive diagrams.
